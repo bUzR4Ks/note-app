@@ -29,7 +29,7 @@ const api = {
     },
     deleteNotes: async (id) => {
         try {
-            const response = await fetch(`${BASE_URL}/notes/${note_id}`, {
+            const response = await fetch(`${BASE_URL}/notes/${id}`, {
                 method: 'DELETE',
             });
             if (!response.ok) throw new Error('Gagal menghapus catatan');
