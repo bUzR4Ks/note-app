@@ -23,7 +23,10 @@ class SaveButton extends HTMLElement {
             
             noteDiv.querySelector('.delete-btn').addEventListener('click', () => {
                 noteDiv.remove();
+                console.log(note.id);
+                api.deleteNotes(note.id);
                 console.log("Catatan dihapus:", note.title);
+                
             });
             
             noteContainer.prepend(noteDiv); 
