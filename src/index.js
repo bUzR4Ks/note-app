@@ -22,6 +22,7 @@ async function renderData() {
             
             noteDiv.querySelector('.delete-btn').addEventListener('click', () => {
                 noteDiv.remove();
+                api.deleteNotes(note.id);
                 console.log("Catatan dihapus:", note.title);
             });
             
